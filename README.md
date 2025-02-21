@@ -75,8 +75,9 @@ whisper-asr-webservice:
 ## Development
 
 To modify the web interface:
-1. Edit `index.html` in the root directory
+1. Edit `index.html` in the root directory (you can also change the model there, or the system prompt)
 2. The changes will be reflected immediately through the Nginx server
+3. Original file was meant to be 1 big HTML file - on purpose, for simplicity
 
 ## Credits
 - [HumanFace Tech](https://humanfacetech.com/) - Author
