@@ -79,8 +79,8 @@ To modify the web interface:
 2. The changes will be reflected immediately through the Nginx server
 
 ## Credits
-- [HumanFace Tech](http://humanfacetech.com/) - Author
-- [Sergiu Nagailic - aka - Nikro](nikro.me) - Author
+- [HumanFace Tech](https://humanfacetech.com/) - Author
+- [Sergiu Nagailic - aka - Nikro](https://nikro.me/) - Author
 - [Whisper ASR Webservice](https://github.com/ahmetoner/whisper-asr-webservice) by Ahmet Öner
 - [Ollama](https://ollama.ai/) for local LLM processing
 - [Material Icons](https://fonts.google.com/icons) for UI elements
