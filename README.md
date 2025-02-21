@@ -12,6 +12,8 @@ This means - **everything is locally hosted**.
 4. **Wait** 2-3 seconds
 5. **Paste anywhere** pre-formatted and polished text.
 
+This means: **Mic** -> Whisper -> Raw Text -> LLM -> Formatted Text -> **Clipboard**.
+
 ## Features
 
 - 🎤 Browser-based audio recording
