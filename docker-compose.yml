@@ -1,17 +1,40 @@
-version: "3.4"
+version: "3.8"
 
 services:
-  whisper-asr-webservice:
-    build:
+  whisper-asr-webservice-gpu:
+    build: 
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.gpu
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
     environment:
-      - ASR_MODEL=base
+      - ASR_MODEL=medium.en
+      - ASR_ENGINE=faster_whisper
     ports:
-      - "9000:9000"
+      - "9100:9000" # Sorry moving this because of xdebug.
     volumes:
       - ./app:/app/app
-      - cache-whisper:/root/.cache
+      - /usr/local/cuda:/usr/local/cuda
+      - cache-pip:/root/.cache/pip
+      - cache-poetry:/root/.cache/poetry
+      - cache-whisper:/root/.cache/whisper
+      - cache-faster-whisper:/root/.cache/faster_whisper
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "9180:80" # Maintaining 91xx pattern (again, 80 is taken by xdebug)
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html:ro
+      - ./nginx-default.conf:/etc/nginx/conf.d/default.conf:ro
 
 volumes:
+  cache-pip:
+  cache-poetry:
   cache-whisper:
+  cache-faster-whisper:
