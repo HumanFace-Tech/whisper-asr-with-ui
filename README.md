@@ -4,6 +4,14 @@ A web-based user interface for [Whisper ASR Webservice](https://github.com/ahmet
 
 This means - **everything is locally hosted**.
 
+## How it works:
+
+1. Click **Record**
+2. **Speak stuff** into the MIC
+3. Click **Stop*
+4. **Wait* 2-3 seconds
+5. **Paste anywhere** pre-formatted and polished text.
+
 ## Features
 
 - 🎤 Browser-based audio recording
