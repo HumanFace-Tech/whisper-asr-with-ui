@@ -8,8 +8,8 @@ This means - **everything is locally hosted**.
 
 1. Click **Record**
 2. **Speak stuff** into the MIC
-3. Click **Stop*
-4. **Wait* 2-3 seconds
+3. Click **Stop**
+4. **Wait** 2-3 seconds
 5. **Paste anywhere** pre-formatted and polished text.
 
 ## Features
